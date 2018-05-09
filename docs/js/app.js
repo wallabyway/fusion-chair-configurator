@@ -209,9 +209,7 @@ window.app = new Vue({
           env: "Local",
           useADP: false,
           useConsolidation: false,
-          urn2: "svf/AuroraDoor/Design.svf",
-          urn2: "svf/cladAwningWindow/Design.svf",
-          urn: "svf/Siteline_CladCasement30X48/Design.svf",
+          urn: "svf/Design.svf",
       }
       Autodesk.Viewing.Initializer( options, function() {
           viewer.start(options.urn, options, self.onSuccess);            
