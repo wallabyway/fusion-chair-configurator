@@ -1,6 +1,6 @@
 var viewer;
 
-window.devicePixelRatio=3;
+window.devicePixelRatio=1.2;
 //Vue.config.devtools = true;
 
 // Vue.js components
@@ -24,8 +24,8 @@ window.app = new Vue({
     // selection-sets for wood, grill, glass & frame
     frags:{}, 
     wood_SelectionSet: ["P007406-005","P007448-012", "P007550", "P003174", "P004351", "P004358", "P004396", "P004397", "P004354", "P004398"],
-    grill_SelectionSet: ["W4500SDLwithShadowBar-32","none","W4500SDLwithShadowBar-31","W4500SDLwithShadowBar-30"],
-    frame_SelectionSet: ["P007407", "P003009"],
+    grill_SelectionSet: ["BACK:1","none","BOTTOM:1"],
+    frame_SelectionSet: ["HANDLESUPPORT:1", "HANDLESUPPORT:2"],
     glass_SelectionSet: ["4500IGAssy"],
     
     // selector-toolbars for interior/exterior view, wood-texture-list, grill-color-list, metal-frame-color and glass-texture-list  
@@ -34,8 +34,8 @@ window.app = new Vue({
       {rgb:"#c0a000", texture:"Jeld-Wen_light"},
       {rgb:"#705000", texture:"Jeld-Wen_Alder"}, 
       {rgb:"#6B2112", texture:"1_mats_wood_mahogany"}],
-    grillColorList: ["#050304","#F3FAF3"],
-    frameColorList: ["#F0E6C3","#0B3328","#2E180D","#6B2112"],
+    grillColorList: ["#F0E6C3","#0B3328","#2E180D","#6B2112"],
+    frameColorList: ["#050304","#F3FAF3"],
     glassColorList: [      
       {rgb:"#F3F3FF", ior:0.01}, 
       {rgb:"#E0E0FF", ior:0.1}, 
@@ -188,8 +188,8 @@ window.app = new Vue({
       viewer.setGroundReflection(false);
       viewer.impl.toggleProgressive(false);
       viewer.impl.setOptimizeNavigation(true);
-      viewer.impl.disableHighlight(true);
-      viewer.impl.disableSelection(true);
+//      viewer.impl.disableHighlight(true);
+//      viewer.impl.disableSelection(true);
       this.setView(0);
       viewer.setBackgroundColor(180,220,255,255,255,255);
       //viewer.impl.toggleShadows(true);
